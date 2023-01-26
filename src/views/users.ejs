@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Proyecto Jere</title>
+</head>
+
+
+<main>
+
+    <%- include("./partials/header") %>
+
+        <body>
+
+            <% user.forEach(user=> { %>
+
+                <article class="caja-completa">
+
+                    <div class="caja-imagen">
+                        <img src="/img/users/<%= user.image %> " alt="">
+                    </div>
+
+                    <div class="caja-datos">
+
+                        <h1><%= user.name %>  </h1>
+                        <h2><%= user.age %></h2>
+                        <h2><%= user.profesion %></h2>
+                        <a href="/users/editUser/<%= user.id %> "><button>Ver detalle</button></a>
+                    </div>
+                </article>
+                <% }) %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </body>
+
+
+</main>
+
+</html>

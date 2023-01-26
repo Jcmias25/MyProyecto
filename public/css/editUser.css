@@ -1,0 +1,28 @@
+.cajuela {
+    height: 500px;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+}
+
+.registerForm{
+    justify-content: center;
+    display: flex;
+    height: 100%;
+}
+.imagen-perfil{
+
+    width: 20%;
+}
+
+div img {
+
+    width: 100%;
+    height: 100%;
+}
+
+

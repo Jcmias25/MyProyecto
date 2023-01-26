@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/register.css">
+
+        <title>Proyecto Jere</title>
+    </head>
+
+    <main>
+        <%- include('./partials/header')  %> 
+<body>
+    
+
+    <form class="registerForm" action="/users/register" method="POST" enctype="multipart/form-data">
+        <h1>Registro</h1>
+
+
+        <label for="name">Nombre y Apellido</label>
+        <input 
+                 type="text" 
+                name="name" 
+                 class= "<%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                 value = "<%= locals.oldData ? oldData.name : null %>"
+        >
+
+        <% if (locals.errors && errors.name) { %>
+            <div class="text-danger"><%= errors.name.msg %> </div>
+        <% } %>
+        
+
+        <label for="password">Contraseña</label>
+        <input 
+        type="password" 
+        name="password" 
+        class= "<%= locals.errors && errors.password ? 'is-invalid' : null %>"
+        >
+
+        <% if (locals.errors && errors.password) { %>
+            <div class="text-danger"><%= errors.password.msg %> </div>
+        <% } %>
+
+
+
+        <label for="mail">Mail</label>
+        <input 
+        type="email" 
+        name="mail" 
+        class= "<%= locals.errors && errors.mail ? 'is-invalid' : null %>"
+        value = "<%= locals.oldData ? oldData.mail : null %>"
+        >
+
+        <% if (locals.errors && errors.mail) { %>
+            <div class="text-danger"><%= errors.mail.msg %> </div>
+        <% } %>
+
+
+
+        <label for="age">Edad</label>
+        <input 
+        type="number" 
+        name="age" 
+        class= "<%= locals.errors && errors.mail ? 'is-invalid' : null %>"
+        value = "<%= locals.oldData ? oldData.age : null %>"
+        >
+
+        <% if (locals.errors && errors.age) { %>
+            <div class="text-danger"><%= errors.age.msg %> </div>
+        <% } %>
+
+
+
+
+        <label for="profesion">Profesión</label>
+        <input 
+        type="text" 
+        name="profesion" 
+        class= "<%= locals.errors && errors.profesion ? 'is-invalid' : null %>"
+        value = "<%= locals.oldData ? oldData.profesion : null %>"
+        >
+
+        <% if (locals.errors && errors.profesion) { %>
+            <div class="text-danger"><%= errors.profesion.msg %> </div>
+        <% } %>
+
+
+
+
+        <label for="image">Foto de perfil</label>
+        <input 
+        type="file" 
+        name="image"
+        >
+
+        <% if (locals.error && errors.image) { %>
+
+            <div class="text-danger"> 
+                <%= errors.image.msg %> 
+             </div>
+         
+        <% } %>
+
+        <input class="enviar" type="submit"> 
+
+
+
+
+
+    </form>
+</body>
+</main>
+</html>

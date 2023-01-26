@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+    <title>Proyecto Jere</title>
+</head>
+
+
+<main>
+
+     <%- include("./partials/header") %> 
+
+        <body>
+
+
+            <h1 class="titulo">Bienvenido a tu perfil!</h1>
+                <article class="caja-completa">
+
+                    <div class="caja-imagen">
+                        <img src="/img/users/<%= userInSession.image %> " alt="">
+                    </div>
+
+                    <div class="caja-datos">
+
+                        <h1><%= userInSession.name %>  </h1>
+                        <h2><%= userInSession.age %></h2>
+                        <h2><%= userInSession.profesion %></h2>
+                        <a href="/users/editUser/<%= userInSession.id %> "><button>Ver detalle</button></a>
+                    </div>
+                </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </body>
+
+
+</main>
+
+</html>

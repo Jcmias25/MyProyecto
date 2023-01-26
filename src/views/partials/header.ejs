@@ -1,0 +1,36 @@
+<header>
+
+    <div class="barra-superior">
+
+
+
+        <% if (!locals.isLogged) { %>
+            <div class="caja-1">
+                <a href="/users/register"><p>Crear un nuevo usuario!</p></a>
+            </div>
+    
+            <div class="caja-2">
+                <p>Proyecto de Jeremías Cuenca</p>
+            </div>
+
+
+        <% } else { %>
+
+        <div class="caja-1">
+
+            <a href="/users"><p>Listado de Usuarios</p></a>
+            <p>Bienvenido, <%= locals.userLogged.name %> </p></a>
+            <a href="/users/logout"><p>Logout</p></a>
+        </div>
+
+        <div class="caja-2">
+            
+            <p>Proyecto de Jeremías Cuenca</p>
+
+        </div>
+
+        <% } %> 
+    </div>
+
+
+</header>

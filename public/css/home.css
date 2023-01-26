@@ -1,0 +1,14 @@
+.titulo{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.caja-2{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin-right:40px;
+}
+
+

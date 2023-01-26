@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/register.css">
+
+        <title>Proyecto Jere</title>
+    </head>
+
+    <main>
+        <%- include('./partials/header')  %> 
+<body>
+    
+
+    <form class="registerForm" action="/users/login" method="POST">
+        <h1>INICIAR SESION</h1>
+
+        <label for="mail">Mail</label>
+        <input type="email" name="mail">
+        <% if (locals.errors && errors.mail) { %>
+            <div class="text-danger">
+                <%= errors.mail.msg %> 
+            </div>
+        <% } %>
+
+        <label for="password">Contraseña</label>
+        <input type="password" name="password">
+
+        <div class="checkbox"> 
+
+             <label for="Recordarme">
+             <input type="checkbox" name="recordarme"> Recordarme 
+             </label>
+
+        </div>
+
+         <input class="enviar" type="submit"> 
+
+
+
+
+
+    </form>
+</body>
+</main>
+</html>
