@@ -18,11 +18,11 @@
     <form class="registerForm" action="/users/login" method="POST">
         <h1>INICIAR SESION</h1>
 
-        <label for="mail">Mail</label>
-        <input type="email" name="mail">
-        <% if (locals.errors && errors.mail) { %>
+        <label for="email">Email</label>
+        <input type="email" name="email">
+        <% if (locals.error) { %>
             <div class="text-danger">
-                <%= errors.mail.msg %> 
+                <%= error%> 
             </div>
         <% } %>
 

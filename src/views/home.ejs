@@ -23,15 +23,15 @@
                 <article class="caja-completa">
 
                     <div class="caja-imagen">
-                        <img src="/img/users/<%= userInSession.image %> " alt="">
+                        <img src="/img/users/<%= userLogged.image %> " alt="">
                     </div>
 
                     <div class="caja-datos">
 
-                        <h1><%= userInSession.name %>  </h1>
-                        <h2><%= userInSession.age %></h2>
-                        <h2><%= userInSession.profesion %></h2>
-                        <a href="/users/editUser/<%= userInSession.id %> "><button>Ver detalle</button></a>
+                        <h1><%= userLogged.name %>  </h1>
+                        <h2><%= userLogged.age %></h2>
+                        <h2><%= userLogged.profesion %></h2>
+                        <a href="/users/editUser/<%= userLogged.id %> "><button>Ver detalle</button></a>
                     </div>
                 </article>
 

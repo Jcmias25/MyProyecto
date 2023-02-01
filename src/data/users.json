@@ -1,11 +1,11 @@
 [
  {
   "id": 1,
-  "name": "Jeremias Cuenca",
-  "password": "$2a$10$W9Ki3RGpYvKiHz0IEOXDLurxfTXSds645CCV4yNzB7VAIlqTFCiXG",
+  "name": "Jeremias Cuenca ",
+  "password": "$2a$10$yx2yXgYQ4EPAKYcLJdpVgOM0hfYqUHk3.MxDfZ36D5xeKdOSJZgYu",
   "mail": "jerecuenca@hotmail.com",
-  "age": "22",
+  "age": "23",
   "profesion": "Programador",
-  "image": "image-1669674793220.jpg"
+  "image": "image-1674825138699.jpeg"
  }
 ]

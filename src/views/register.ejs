@@ -19,12 +19,24 @@
         <h1>Registro</h1>
 
 
-        <label for="name">Nombre y Apellido</label>
+        <label for="name">Nombre</label>
         <input 
                  type="text" 
                 name="name" 
                  class= "<%= locals.errors && errors.name ? 'is-invalid' : null %>"
                  value = "<%= locals.oldData ? oldData.name : null %>"
+        >
+
+        <% if (locals.errors && errors.name) { %>
+            <div class="text-danger"><%= errors.name.msg %> </div>
+        <% } %>
+
+        <label for="lastname">Apellido</label>
+        <input 
+                 type="text" 
+                name="lastname" 
+                 class= "<%= locals.errors && errors.lastname ? 'is-invalid' : null %>"
+                 value = "<%= locals.oldData ? oldData.lastname : null %>"
         >
 
         <% if (locals.errors && errors.name) { %>
@@ -45,10 +57,10 @@
 
 
 
-        <label for="mail">Mail</label>
+        <label for="mail">Email</label>
         <input 
         type="email" 
-        name="mail" 
+        name="email" 
         class= "<%= locals.errors && errors.mail ? 'is-invalid' : null %>"
         value = "<%= locals.oldData ? oldData.mail : null %>"
         >
@@ -77,7 +89,7 @@
         <label for="profesion">Profesión</label>
         <input 
         type="text" 
-        name="profesion" 
+        name="profession" 
         class= "<%= locals.errors && errors.profesion ? 'is-invalid' : null %>"
         value = "<%= locals.oldData ? oldData.profesion : null %>"
         >
